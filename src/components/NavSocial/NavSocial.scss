@@ -1,4 +1,10 @@
-.nav__icons{
+.nav{
+
+    &__social{
+padding-bottom: 20px;
+    }
+
+  &__icons{
     font-size: 50px;
     color:white;
     padding: 0px 10px 50px 10px;
@@ -9,5 +15,8 @@
     }
     &::after{
         filter: drop-shadow(0px 0px 10px white) 
-    }
+    }  
+}
+
+
 }

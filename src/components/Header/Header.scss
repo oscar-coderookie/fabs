@@ -55,7 +55,7 @@
     }
     &-nav {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-direction: column;
       align-items: center;
       flex-wrap: wrap;
@@ -65,7 +65,7 @@
       transition: all 0.4s ease-in-out;
       top: 0;
       z-index: 90;
-      background: linear-gradient(177deg, rgba(6,60,27,1) 0%, rgba(4,123,52,1) 50%, rgba(6,60,27,1) 100%);
+      background:rgba(6, 60, 27, 0.85);
       background-size: cover;
       backdrop-filter: blur(5px);
       text-transform: uppercase;
