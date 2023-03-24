@@ -90,12 +90,13 @@
       padding: 20px 0px 20px 0px;
       letter-spacing: 3px;
       width: 100%;
+      font-weight: 600;
       transition: all 0.4s ease-in-out;
   
       &:hover {
-        font-weight: 600;
+        font-weight: 800;
         background: rgba(255, 255, 255, 0.815);
-        color: rgb(0, 0, 0);
+        color:rgba(6,60,27,1);
       }
     }
     &__submenu {

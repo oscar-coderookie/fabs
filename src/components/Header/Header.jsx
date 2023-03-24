@@ -14,9 +14,11 @@ const Header = () => {
   const menuLinks = [
     { name: "Clubes", url: "/teams" },
     { name: "campeonatos", url: "/events" },
-    { name: "imagenes", url:"/images"},
+    { name: "imágenes", url:"/images"},
     { name: "noticias", url:"/news"},
-    { name: "contacto", url:"/contact"}
+    { name: "contacto", url:"/contact"},
+    { name: "patrocinadores", url:"/sponsors"},
+
     
   ];
 
@@ -35,7 +37,7 @@ const Header = () => {
           ></Hamburger>
         </div>
       <div className="header-logo">
-        <h2>federación andaluza de béisbol y sóftbol</h2>
+        <h2>Federación Andaluza de Béisbol y Sóftbol</h2>
          <img src={logo} alt="logo-aroma-king" />
       </div>
        

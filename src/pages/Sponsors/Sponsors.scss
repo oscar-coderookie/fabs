@@ -1,0 +1,20 @@
+.sponsors{
+    &__block{
+        padding-top: 120px;
+    }
+    &__title{
+        font-weight: 500;
+        text-transform: uppercase;
+
+    }
+    &__info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__logo{
+        width: 300px;
+        padding: 30px;
+    }
+}

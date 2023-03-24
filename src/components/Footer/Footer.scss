@@ -1,0 +1,57 @@
+.footer{
+    &__block{
+        background: linear-gradient(315deg, rgba(6,60,27,1) 0%, rgba(4,123,52,1) 50%, rgba(6,60,27,1) 100%);
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+    &__sponsors{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 30px;
+
+        &__list{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            
+        }
+        &__logo{
+            height: 60px;
+            filter: drop-shadow(0px 0px 20px white);
+            padding: 10px;
+        }
+        &__logosmall{
+            height: 100px;
+            filter: drop-shadow(0px 0px 20px white);
+            padding: 10px;
+        }
+    }
+    &__sponsortitle{
+        font-size: 14px;
+        color: white;
+    }
+
+    &__copyright{
+        font-size: 12px;
+        font-weight: 300;
+        color: white;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+    }
+    @media (max-width: 475px) {
+
+       &__copyright{
+        padding-left: 20px;
+        padding-right: 20px;
+       }
+       
+    }
+}
