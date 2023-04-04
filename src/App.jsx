@@ -4,6 +4,8 @@ import HomePage from './pages/HomePage/HomePage';
 import { Footer, Header } from './components';
 import ComingSoon from './pages/ComingSoon/ComingSoon';
 import Sponsors from './pages/Sponsors/Sponsors';
+import Teams from './pages/Teams/Teams';
+import TeamDetail from './pages/TeamDetail/TeamDetail';
 
 const Layout = () => {
   return (
@@ -13,7 +15,8 @@ const Layout = () => {
       <Route exact path="/news" element={<ComingSoon />} />
       <Route exact path="/contact" element={<ComingSoon />} />
       <Route exact path="/images" element={<ComingSoon />} />
-      <Route exact path="/teams" element={<ComingSoon />} />
+      <Route exact path="/teams" element={<Teams />} />
+      <Route exact path="/teams/:id" element={<TeamDetail />} />
       <Route exact path="/sponsors" element={<Sponsors/>} />
     </Routes>
   )

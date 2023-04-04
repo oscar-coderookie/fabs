@@ -141,7 +141,12 @@
     }
     @media (max-width: 1080px) {
       &-block {
-        padding: 0px 14px 0px 10px;
+     
+      }
+      &-logo{
+        h2{
+          font-size: 14px;
+        }
       }
       &-nav {
         width: 100%;
