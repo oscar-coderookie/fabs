@@ -21,16 +21,17 @@ const SlideShow = ({ photos }) => {
 
   return (
     <div className="slide">
-      <img
+      
+      <div className="slide__buttonbar">
+        <button className="slide__btn " onClick={handlePrevClick}>
+            <FaChevronLeft className="slide__icons"/>
+        </button>
+        <img
         className="slide__img"
         src={photos[currentIndex]}
         alt={`Image ${currentIndex + 1}`}
       />
-      <div className="slide__buttonbar">
-        <button className="slide__btn" onClick={handlePrevClick}>
-            <FaChevronLeft className="slide__icons"/>
-        </button>
-        <button className="slide__btn" onClick={handleNextClick}>
+        <button className="slide__btn slide__btn-right" onClick={handleNextClick}>
             <FaChevronRight className="slide__icons"/>
         </button>
       </div>

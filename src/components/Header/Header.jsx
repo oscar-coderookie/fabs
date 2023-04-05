@@ -4,6 +4,7 @@ import "./Header.scss";
 import logo from './../../assets/img/fabs-logo.png';
 import { Slant as Hamburger } from "hamburger-react";
 import NavSocial from "../NavSocial/NavSocial";
+import { FaUser } from "react-icons/fa";
 
 
 const Header = () => {
@@ -38,7 +39,11 @@ const Header = () => {
         </div>
       <div className="header-logo">
         <h2>Federación Andaluza de Béisbol y Sóftbol</h2>
-         <img src={logo} alt="logo-aroma-king" />
+         <img src={logo} alt="logo-fabs" />
+         <NavLink to="/login">
+          <FaUser className="header__user"/>
+         </NavLink>
+         
       </div>
        
 

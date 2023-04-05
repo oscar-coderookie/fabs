@@ -28,8 +28,8 @@ const Teams = () => {
         <div className="teams__mosaic">
             {teams.map((team,index) => {
         return (
-        <NavLink className="teams__link" to={`/teams/${team.id}`}>
-            <div key={index} className="teams__card">
+        <NavLink key={index} className="teams__link" to={`/teams/${team.id}`}>
+            <div  className="teams__card">
             <div className="teams__card__fieldset">
                 <img className="teams__card__img" src={thumbNail} alt="thumb" />
               <p className="teams__card__name">{team.name}</p>

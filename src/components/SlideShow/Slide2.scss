@@ -1,0 +1,45 @@
+.galeria {
+  width: 80%;
+  margin: 0 auto;
+  z-index: 200;
+
+  &__slide-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; // 16:9 aspect ratio
+  }
+  &__slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  &--active {
+    opacity: 1;
+  }
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  &__next {
+    right: 0;
+  }
+  &__prev {
+    left: 0;
+  }
+}

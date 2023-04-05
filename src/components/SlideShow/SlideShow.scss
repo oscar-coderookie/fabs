@@ -1,6 +1,8 @@
 .slide{
+    position: relative;
     &__img{
-        width: 800px;
+        height: 400px;
+        transition: opacity 0.5s ease-in-out;
     }
     &__buttonbar{
         display: flex;
@@ -10,26 +12,43 @@
         width: 100%;
     }
     &__btn{
-        background: rgba(6,60,27,1);
+        background: rgba(6, 60, 27, 0.562);
         stroke: none;
         outline: none;
         border: none;
-        padding: 20px;
+        padding: 10px;
         border-radius: 40px;
         transition: all ease 0.23s;
+        position: absolute;
         &:hover{
             background:rgb(4, 184, 73) ;
             color: black
         }
+    }
+    &__btn-right{
+        right: 0;
+        margin-right: 20px;
+    }
+    &__btn-left{
+        left: 0;
+        margin-left: 20px;
     }
     &__icons{
         font-size: 20px;
         color: white;
     }
     @media (max-width: 475px) {
+        width: 100%;
+        &__buttonbar{
+            overflow: hidden;
+        width: 100%;
+        }
 
         &__img{
+            overflow: hidden;
             width: 350px;
+            object-fit: cover;
+            
         }
     }
 }

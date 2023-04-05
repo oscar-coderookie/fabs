@@ -5,6 +5,11 @@
     justify-content: center;
     flex-direction: column;
 
+    &__text{
+        font-weight: 400;
+        font-size: 16px;
+    }
+
     &__gallery{
         display: flex;
         align-items: center;
