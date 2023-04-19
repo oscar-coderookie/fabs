@@ -1,0 +1,19 @@
+.competitions{
+    &__block{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    &__title{
+        text-transform: uppercase;
+    }
+    &__pdf{
+        width: 80%;
+        padding-top: 30px;
+    }
+
+}

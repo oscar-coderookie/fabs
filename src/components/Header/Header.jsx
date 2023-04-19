@@ -14,7 +14,7 @@ const Header = () => {
 
   const menuLinks = [
     { name: "Clubes", url: "/teams" },
-    { name: "campeonatos", url: "/events" },
+    { name: "competiciones", url: "/events" },
     { name: "imágenes", url:"/images"},
     { name: "noticias", url:"/news"},
     { name: "contacto", url:"/contact"},
@@ -40,9 +40,9 @@ const Header = () => {
       <div className="header-logo">
         <h2>Federación Andaluza de Béisbol y Sóftbol</h2>
          <img src={logo} alt="logo-fabs" />
-         <NavLink to="/login">
+        {/*  <NavLink to="/login">
           <FaUser className="header__user"/>
-         </NavLink>
+         </NavLink> */}
          
       </div>
        

@@ -10,12 +10,13 @@ import TeamDetail from './pages/TeamDetail/TeamDetail';
 import { useState } from 'react';
 import Login from './components/Login/Login';
 import UserPage from './pages/UserPage/UserPage';
+import CompetitionsPage from './pages/CompetitionsPage/CompetitionsPage';
 
 const Layout = () => {
   return (
     <Routes>
       <Route exact path="/" element={<HomePage />} />
-      <Route exact path="/events" element={<ComingSoon />} />
+      <Route exact path="/events" element={<CompetitionsPage />} />
       <Route exact path="/news" element={<ComingSoon />} />
       <Route exact path="/contact" element={<ComingSoon />} />
       <Route exact path="/images" element={<ComingSoon />} />

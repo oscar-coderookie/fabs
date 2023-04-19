@@ -8,6 +8,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
+  
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
   const navigate = useNavigate();
