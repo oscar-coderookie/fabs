@@ -11,14 +11,18 @@ import { useState } from 'react';
 import Login from './components/Login/Login';
 import UserPage from './pages/UserPage/UserPage';
 import CompetitionsPage from './pages/CompetitionsPage/CompetitionsPage';
+import CircularsPage from './pages/CircularsPage/CircularsPage';
+import ContactPage from './pages/ContactPage/ContactPage';
+import NewsPage from './pages/NewsPage/NewsPage';
 
 const Layout = () => {
   return (
     <Routes>
       <Route exact path="/" element={<HomePage />} />
       <Route exact path="/events" element={<CompetitionsPage />} />
-      <Route exact path="/news" element={<ComingSoon />} />
-      <Route exact path="/contact" element={<ComingSoon />} />
+      <Route exact path="/news" element={<NewsPage />} />
+      <Route exact path="/contact" element={<ContactPage />} />
+      <Route exact path="/bulletin" element={<CircularsPage />} />
       <Route exact path="/images" element={<ComingSoon />} />
       <Route exact path="/teams" element={<Teams />} />
       <Route exact path="/teams/:id" element={<TeamDetail />} />

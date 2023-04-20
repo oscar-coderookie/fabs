@@ -10,12 +10,13 @@ import { FaUser } from "react-icons/fa";
 const Header = () => {
 
   const [open, setOpen] = useState(false);
-  const ubication = window.location.pathname;
+
 
   const menuLinks = [
+    { name: "Home", url: "/" },
     { name: "Clubes", url: "/teams" },
     { name: "competiciones", url: "/events" },
-    { name: "imágenes", url:"/images"},
+    { name: "circulares", url:"/bulletin"},
     { name: "noticias", url:"/news"},
     { name: "contacto", url:"/contact"},
     { name: "patrocinadores", url:"/sponsors"},
@@ -51,15 +52,8 @@ const Header = () => {
       {open === false ? null : (
         <nav className="header-nav">
           <div className="header-nav__sections">
-            {ubication === "/" ? null : (
-              <NavLink
-                to="/"
-                className="header-nav__links"
-                onClick={() => setOpen(!open)}
-              >
-                Home
-              </NavLink>
-            )}
+            
+         
             {menuLinks.map((links, index) => {
               return (
                 <NavLink
