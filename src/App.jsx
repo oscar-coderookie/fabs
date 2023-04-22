@@ -14,6 +14,7 @@ import CompetitionsPage from './pages/CompetitionsPage/CompetitionsPage';
 import CircularsPage from './pages/CircularsPage/CircularsPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import NewsPage from './pages/NewsPage/NewsPage';
+import RegulationPage from './pages/RegulationPage/RegulationPage';
 
 const Layout = () => {
   return (
@@ -23,6 +24,7 @@ const Layout = () => {
       <Route exact path="/news" element={<NewsPage />} />
       <Route exact path="/contact" element={<ContactPage />} />
       <Route exact path="/bulletin" element={<CircularsPage />} />
+      <Route exact path="/regulation" element={<RegulationPage />} />
       <Route exact path="/images" element={<ComingSoon />} />
       <Route exact path="/teams" element={<Teams />} />
       <Route exact path="/teams/:id" element={<TeamDetail />} />

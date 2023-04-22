@@ -4,22 +4,34 @@ import "./Header.scss";
 import logo from './../../assets/img/fabs-logo.png';
 import { Slant as Hamburger } from "hamburger-react";
 import NavSocial from "../NavSocial/NavSocial";
-import { FaUser } from "react-icons/fa";
+import { FaMinus, FaPlus } from "react-icons/fa";
 
 
 const Header = () => {
 
   const [open, setOpen] = useState(false);
-
-
+  const [documentosOpen, setDocumentosOpen] = useState(false);
+  const handleDocumentosClick = () => {
+    setDocumentosOpen(!documentosOpen);
+  };
+  
   const menuLinks = [
     { name: "Home", url: "/" },
     { name: "Clubes", url: "/teams" },
     { name: "competiciones", url: "/events" },
-    { name: "circulares", url:"/bulletin"},
+    {
+      name: "Documentos",
+      url: "",
+      subLinks: [
+        { name: "Circulares", url: "/bulletin" },
+        { name: "Reglamentos", url: "/regulation" },
+      ],
+    },
     { name: "noticias", url:"/news"},
     { name: "contacto", url:"/contact"},
     { name: "patrocinadores", url:"/sponsors"},
+    
+
 
     
   ];
@@ -53,19 +65,48 @@ const Header = () => {
         <nav className="header-nav">
           <div className="header-nav__sections">
             
-         
-            {menuLinks.map((links, index) => {
-              return (
-                <NavLink
-                  key={index}
-                  to={links.url}
-                  className="header-nav__links"
-                  onClick={() => setOpen(!open)}
-                >
-                  {links.name}
-                </NavLink>
-              );
-            })}
+          <div className="header-nav__submenu">
+  
+  </div>
+          {menuLinks.map((link, index) => {
+  if (link.subLinks) {
+    return (
+      <div key={index} className="header-nav__toogle">
+        <div
+          className="header-nav__documents header-nav__links"
+          onClick={handleDocumentosClick}
+        >
+          {documentosOpen ? <FaMinus className="header-nav__icons"/> : <FaPlus className="header-nav__icons"/>}
+         <p>Documentos</p>
+          
+        </div>
+
+        {documentosOpen &&
+          link.subLinks.map((subLink, index) => (
+            <NavLink
+              key={index}
+              to={subLink.url}
+              className="header-nav__links"
+              onClick={() => setOpen(false)}
+            >
+              {subLink.name}
+            </NavLink>
+          ))}
+      </div>
+    );
+  } else {
+    return (
+      <NavLink
+        key={index}
+        to={link.url}
+        className="header-nav__links"
+        onClick={() => setOpen(false)}
+      >
+        {link.name}
+      </NavLink>
+    );
+  }
+})}
           </div>
 <NavSocial/>
         </nav>

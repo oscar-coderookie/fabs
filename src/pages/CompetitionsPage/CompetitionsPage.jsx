@@ -5,11 +5,15 @@ import calendar2023 from './../../assets/pdf/Calendario 2023.pdf';
 import calendarSub18 from './../../assets/pdf/Calendario Liga Andaluza Sub18 2023.pdf';
 import calendarSub12 from './../../assets/pdf/Liga Andaluza Sub14 y Sub12 2023.pdf';
 import { PdfViewer } from "../../components";
+import {FaTrophy} from 'react-icons/fa'
 
 const CompetitionsPage = () => {
   return (
     <div className="competitions__block">
+      <h2 className="competitions__block__title">Competiciones:</h2>
+      <div className="competitions__container">
       <div className="competitions__pdf">
+     
         <h2 className="competitions__title">Calendario 2023</h2>
        <PdfViewer url={calendar2023} />
       </div>
@@ -25,6 +29,8 @@ const CompetitionsPage = () => {
         <h2 className="competitions__title">Calendario Liga andaluza sub18 2023</h2>
        <PdfViewer url={calendarSub18}/>
       </div>
+      </div>
+      
     </div>
   );
 };
