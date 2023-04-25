@@ -28,6 +28,7 @@ const Header = () => {
       ],
     },
     { name: "noticias", url:"/news"},
+    { name: "galeria", url:"/gallery"},
     { name: "contacto", url:"/contact"},
     { name: "patrocinadores", url:"/sponsors"},
     

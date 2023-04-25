@@ -10,7 +10,6 @@ const Teams = () => {
 
     const [teams, setTeams] = useState([]);
 
-
     useEffect(() => {
         const collectionRef = collection(db, "teams")
         const q = query(collectionRef, orderBy("name", "asc"));
@@ -31,7 +30,7 @@ const Teams = () => {
         <NavLink key={index} className="teams__link" to={`/teams/${team.id}`}>
             <div  className="teams__card">
             <div className="teams__card__fieldset">
-                <img className="teams__card__img" src={thumbNail} alt="thumb" />
+                {team.logo ===  undefined ? <img className="teams__card__img" src={thumbNail} alt="thumb" /> : <img className="teams__card__img" src={team.logo} alt="thumb" />}
               <p className="teams__card__name">{team.name}</p>
             </div>
             <div className="teams__card__fieldset">

@@ -8,6 +8,9 @@
         justify-content: center;
         flex-direction: column;
     }
+    &__date{
+        text-align: right;
+    }
     &__title{
         font-size: 40px;
         text-transform: uppercase;
@@ -24,6 +27,13 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        padding: 30px;
+        background-image: linear-gradient(75deg, #fdfbfb 0%, #ebedee 100%);
+        filter: drop-shadow(0px 1px 2px rgb(85, 85, 85));
+        padding-bottom: 30px;
+        margin: 10px;
+        min-width: 300px;
+        width:80%;
 
         &__title{
             font-size: 30px;
@@ -31,7 +41,11 @@
             text-transform: uppercase;
         }
         &__img{
-            height: 80vh;
+            width: 60%;
+        
+            @media (max-width: 475px) {
+                width: 80%;
+            }
         }
     }
 }
