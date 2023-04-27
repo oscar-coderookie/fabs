@@ -111,7 +111,7 @@ const RegulationPage = () => {
 
   return (
     <div className='regulation__block'>
-        <h2 className="regulation__title">Reglamento:</h2>
+        <h2 className="title__h1">Reglamento:</h2>
         <RegulationRfebs/>
         <RegulationFabs/>
         <RegulationReferees/>

@@ -8,6 +8,7 @@ import CookieBanner from "./CookieBanner/CookieBanner";
 import Register from "./Register/Register";
 import PdfViewer from "./PdfViewer/PdfViewer";
 import FileUploader from './FileUploader/FileUploader';
+import SpinnerLoader from "./SpinnerLoader/SpinnerLoader";
 
 export {
   Header,
@@ -19,5 +20,6 @@ export {
   CookieBanner,
   Register,
   PdfViewer,
-  FileUploader
+  FileUploader,
+  SpinnerLoader
 };

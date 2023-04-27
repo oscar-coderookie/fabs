@@ -17,7 +17,7 @@ const GalleryPage = () => {
   }, []);
   return (
     <div className="gallery__block">
-      <h2 className="gallery__title">Galería de fotos:</h2>
+      <h2 className="title__h1">Galería de fotos:</h2>
       <div className="gallery__mosaic">
         {images.map((image, index) => {
           return (

@@ -5,7 +5,7 @@ import news1 from './../../assets/news/news-1.jpeg';
 const NewsPage = () => {
   return (
     <div className='news__block'>
-        <h2 className='news__title'>Noticias:</h2>
+        <h1 className='title__h1'>Noticias:</h1>
         <div className="news__feed">
 <div className="news__stories">
     <h3 className="news__stories__title">Selección andaluza - sub21:</h3>
