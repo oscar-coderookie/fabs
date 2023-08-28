@@ -7,6 +7,7 @@ import { Slide2, SlideShow } from "../../components";
 
 const TeamDetail = () => {
   const [data, setData] = useState({});
+  const [parrafos, setParrafos] = useState([]);
   const [photos, setPhotos] = useState([]);
   const { id } = useParams();
   const docRef = doc(db, "teams", id);
@@ -15,6 +16,9 @@ const TeamDetail = () => {
     getDoc(docRef).then((doc) => {
       setData(doc.data(), doc.id);
       setPhotos(doc.data().photos);
+      const texto = doc.data().history;
+      const nuevosParrafos = texto.split(". ");
+        setParrafos(nuevosParrafos);
     });
   }, [docRef]);
 
@@ -29,8 +33,14 @@ const TeamDetail = () => {
         {data.history === undefined ? (
           <p className="team-detail__text">"Aún no se tiene ninguna reseña de este club"</p>
         ) : (
-          <p className="team-detail__history">{data.history}</p>
+          <div className="team-detail__container">
+          {parrafos.map((parrafo, index) => (
+        <p className="team-detail__text" key={index}>{parrafo}</p>
+      ))}
+        </div>
         )}
+        
+        
       </div>
     </div>
   );

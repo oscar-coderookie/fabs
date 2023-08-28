@@ -4,10 +4,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    &__container{
+        max-width: 1200px;
+        min-width: 320px;
+    }
 
     &__text{
         font-weight: 400;
         font-size: 16px;
+        text-align: justify;
     }
 
     &__gallery{

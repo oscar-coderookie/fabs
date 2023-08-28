@@ -50,7 +50,7 @@ const HomePage = () => {
   return (
     <div className="home">
       <HomeBlock1 />
-      <HomeBlock2 />
+  
     </div>
   );
 };
